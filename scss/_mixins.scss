@@ -1,0 +1,249 @@
+// Mixins
+@mixin transition-all() {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  @mixin background-img() {
+    background-position: left top;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+  }
+  
+  @mixin raleway-font(){
+    font-family: "Raleway", sans-serif;
+  }
+  
+  @mixin sans-serif-font(){
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  
+  @mixin width($width){
+    width:$width
+  }
+  
+  //animation
+  
+  @mixin animation-name($name...) {
+    -o-animation-name: $name;
+    -moz-animation-name: $name;
+    -webkit-animation-name: $name;
+    animation-name: $name;
+  }
+  @mixin animation-duration($duration...) {
+    -o-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+  }
+  @mixin animation-timing-function($timing...) {
+    -o-animation-timing-function: $timing;
+    -moz-animation-timing-function: $timing;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
+  }
+  @mixin animation-iteration-count($count...) {
+    -o-animation-iteration-count: $count;
+    -moz-animation-iteration-count: $count;
+    -webkit-animation-iteration-count: $count;
+    animation-iteration-count: $count;
+  }
+  @mixin animation-direction($direction...) {
+    -o-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -webkit-animation-direction: $direction;
+    animation-direction: $direction;
+  }
+  @mixin animation-fill-mode($fill...) {
+    -o-animation-fill-mode: $fill;
+    -moz-animation-fill-mode: $fill;
+    -webkit-animation-fill-mode: $fill;
+    animation-fill-mode: $fill;
+  }
+  @mixin animation-play-state($state...) {
+    -o-animation-play-state: $state;
+    -moz-animation-play-state: $state;
+    -webkit-animation-play-state: $state;
+    animation-play-state: $state;
+  }
+  @mixin animation-delay($delay){
+    animation-delay: $delay;
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+  }
+  @mixin animation($animation...) {
+    -o-animation: $animation;
+    -moz-animation: $animation;
+    -webkit-animation: $animation;
+    animation: $animation;
+  }
+  @mixin fadeIn($from,$to){
+    @keyframes fadeIn {
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+    @-ms-keyframes fadeIn {
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+    @-moz-keyframes fadeIn {
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+    @-webkit-keyframes fadeIn {
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+  }
+  @mixin fadeOut($from,$to){
+    @keyframes fadeOut{
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+    @-ms-keyframes fadeOut{
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+    @-moz-keyframes fadeOut{
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+    @-webkit-keyframes fadeOut{
+      from {opacity: $from;}
+      to{opacity: $to;}
+    }
+  }
+  @mixin slideDown($from,$to){
+    @keyframes slideDown{
+      from {top: $from;}
+      to{top: $to;}
+    }
+    @-ms-keyframes slideDown{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+    @-moz-keyframes slideDown{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+    @-webkit-keyframes slideDown{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+  }
+  @mixin slideUp($from,$to){
+    @keyframes slideUp{
+      from {top: $from;}
+      to{top: $to;}
+    }
+    @-ms-keyframes slideUp{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+    @-moz-keyframes slideUp{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+    @-webkit-keyframes slideUp{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+  }
+  
+  @mixin slideRight($from,$to){
+    @keyframes slideRight{
+      from {margin-right: $from;}
+      to{margin-right: $to;}
+    }
+    @-ms-keyframes slideRight{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+    @-moz-keyframes slideRight{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+    @-webkit-keyframes slideRight{
+      from {margin-top: $from;}
+      to{margin-top: $to;}
+    }
+  }
+  
+  @mixin spin($from,$to){
+    @keyframes spin{
+      from {transform: rotate($from);}
+      to{transform: rotate($to);}
+    }
+    @-ms-keyframes spin{
+      from {-ms-transform: rotate($from);}
+      to{-ms-transform: rotate($to);}
+    }
+    @-moz-keyframes spin{
+      from {-moz-transform:rotate($from);}
+      to{-moz-transform:rotate($to);}
+    }
+    @-webkit-keyframes spin{
+      from {-webkit-transform:rotate($from);}
+      to{-webkit-transform:rotate($to);}
+    }
+  }
+  
+  @mixin dropOff($from,$to,$top,$left,$endTop,$endLeft){
+    @keyframes dropOff{
+      0%   {
+        opacity: 0;
+        -webkit-transform: rotate($from);
+        -ms-transform: rotate($from);
+        transform: rotate($from);
+      }
+      50% {
+        top: $top;
+        left: $left;
+        opacity: 1;
+        -webkit-transform: rotate($from+$to/2);
+        -ms-transform: rotate($from+$to/2);
+        transform: rotate($from+$to/2);
+      }
+      100% {
+        opacity: 0;
+        top: $endTop;
+        left: $endLeft;
+        -webkit-transform: rotate($to);
+        -ms-transform: rotate($to);
+        transform: rotate($to);
+      }
+    }
+  }
+  
+  @mixin dropOff2($from,$to,$top,$left,$endTop,$endLeft){
+    @keyframes dropOff2{
+      0%   {
+        opacity: 0;
+        -webkit-transform: rotate($from);
+        -ms-transform: rotate($from);
+        transform: rotate($from);
+      }
+      50% {
+        top: $top;
+        left: $left;
+        opacity: 1;
+        -webkit-transform: rotate($from+$to/2);
+        -ms-transform: rotate($from+$to/2);
+        transform: rotate($from+$to/2);
+      }
+      100% {
+        opacity: 0;
+        top: $endTop;
+        left: $endLeft;
+        -webkit-transform: rotate($to);
+        -ms-transform: rotate($to);
+        transform: rotate($to);
+      }
+    }
+  }

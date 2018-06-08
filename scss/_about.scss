@@ -1,0 +1,67 @@
+//styling for about section
+section.about{
+    background-color: $gray-200;
+    padding:4rem 0;
+    overflow: hidden;
+    position: relative;
+    img.mountain{
+      max-width: 20rem;
+      position:absolute;
+      bottom:0px;
+    }
+    @media screen and (max-width: 800px){
+      img.mountain{
+        display: none;
+      }
+    }
+    .tree-box{
+      position: absolute;
+      right:0px;
+      top:0px;
+      z-index: 102;
+      .tree{
+        max-width:20rem;
+      }
+      @media screen and (max-width: 392px){
+        .tree{
+          margin-right: -1rem;
+        }
+      }
+      .flower1{
+        float:left;
+        position: relative;
+        opacity: 0;
+        max-width:2rem;
+        top:10rem;
+        left:10rem;
+        @include animation-name(dropOff);
+        @include animation-duration(5s);
+        @include animation-timing-function(linear);
+        @include animation-iteration-count(infinite);
+        @include dropOff(0deg,360deg,20rem,0rem,30rem,-10rem);
+      }
+      .flower2{
+        float: left;
+        position: relative;
+        max-width: 1.5rem;
+        top: 10rem;
+        left: 14rem;
+        @include animation-name(dropOff2);
+        @include animation-duration(5s);
+        @include animation-timing-function(linear);
+        @include animation-iteration-count(infinite);
+        @include animation-delay(1s);
+        @include dropOff2(0deg,360deg,20rem,14rem,30rem,5rem);
+      }
+    }
+    img.panda{
+      max-width: 15rem;
+    }
+    h2.about-name{
+      padding-top: 3rem;
+    }
+    a.social-a:hover{
+      color:darken($color: blueviolet, $amount: 4);
+    }
+  }
+  

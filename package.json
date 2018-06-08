@@ -1,0 +1,29 @@
+{
+  "name": "kai",
+  "version": "1.0.0",
+  "description": "this is my personal portfolio",
+  "main": "index.js",
+  "license":"MIT",
+  "author":"kai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KaiFan1/kai.git"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "jquery": "latest",
+    "jquery.easing": "^1.4.1",
+    "popper.js": "latest",
+    "font-awesome": "latest",
+    "scrollreveal":"^3.3.6"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-header": "1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0"
+  }
+}

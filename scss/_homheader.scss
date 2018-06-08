@@ -1,0 +1,36 @@
+//Styling for the homepage header 
+header.homheader{
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    background-image: url('../img/header.jpg');
+    @include background-img;
+    hr.line-1{
+        border-top: 2px solid $gray-600;
+    }
+    .fadeIn{
+        opacity: 1;
+        @include animation-name(fadeIn);
+        @include animation-duration(1s);
+        @include animation-iteration-count(1);
+        @include animation-timing-function(linear);
+        @include fadeIn(0,1);
+    }
+    .fadeOut{
+        opacity: 0;
+        @include animation-name(fadeOut);
+        @include animation-duration(1s);
+        @include animation-iteration-count(1);
+        @include animation-timing-function(linear);
+        @include fadeOut(1,0);
+    }
+
+    @media (min-width:768px) {
+        
+    }
+    @media (min-width:992px) {
+        
+    }
+    @media (min-width:1200px) {
+        
+    }
+}

@@ -1,0 +1,23 @@
+section.contact{
+    background-color: $gray-200;
+    position: relative;
+    .section-heading{
+        font-weight: 700;
+    }
+    .row{
+        text-align: center;
+        h4{
+            margin:2rem 0px;
+        }
+        .contact-info{
+            margin: 2rem 0px;
+        }
+    }
+    .lotus{
+        max-width:20%;
+        position: absolute;
+        bottom:0px;
+        right: 0px;
+        float: right;
+    }
+}
